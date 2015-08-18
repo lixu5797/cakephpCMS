@@ -7,18 +7,16 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 	<!-- Le styles -->
-	{$this->Html->css('bootstrap.min')}
 	<style>
 	body {
 		padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
 	}
 	</style>
 	<!-- Placed at the end of the document so the pages load faster -->
-	<script type="text/javascript" src="js/jquery-2.1.4.min.js" charset="utf-8"></script>
-	{$this->Html->script('bootstrap.min')}
-	{$this->Html->script('jquery.dependent-selects')}
+	{$this->Html->script('jquery-2.1.4.min')}
+	{$this->Html->css('bootstrap')}
+	{$this->Html->script('bootstrap')}
 	{$this->fetch('script')}
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
 	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 	<!--[if lt IE 9]>
 	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -32,9 +30,6 @@
 	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/ico/apple-touch-icon-72-precomposed.png">
 	<link rel="apple-touch-icon-precomposed" href="/ico/apple-touch-icon-57-precomposed.png">
 	-->
-<link rel="stylesheet" href="css/prettyPopin.css" type="text/css" media="screen" charset="utf-8" />
-<link type="text/css" href="css/shadowbox.css" rel="stylesheet" media="all" />
-
 </head>
 
 <body>
