@@ -7,3 +7,13 @@ CREATE TABLE users (
     created timestamp ,
     modified timestamp
 );
+
+CREATE TABLE users (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) not null,
+    mail_address VARCHAR(64) not null,
+    password VARCHAR(255) not null,
+    role VARCHAR(20),
+    created DATETIME DEFAULT NULL,
+    modified DATETIME DEFAULT NULL
+);
