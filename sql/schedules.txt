@@ -1,5 +1,7 @@
 Create Table `schedules` (
 	`id` INT UNSIGNED AUTO_INCREMENT,
+	`title` varchar(255) NOT NULL,
+	`name` varchar(255) DEFAULT NULL, 
 	`start_time` DATETIME DEFAULT NULL,
 	`end_time` DATETIME DEFAULT NULL,
 	`created` DATETIME DEFAULT NULL,
