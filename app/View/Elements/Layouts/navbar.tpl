@@ -12,6 +12,11 @@
 				<li><a href="#about">About</a></li>
 				<li><a href="#contact">Contact</a></li>
 			</ul>
+			<ul class="nav pull-right">
+				<li>
+					<a href="{$this->base}/users/login">login</a>
+				</li>
+			</ul>
 		</div><!--/.nav-collapse -->
 	</div>
 </div>

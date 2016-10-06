@@ -14,9 +14,8 @@
 	</style>
 	<!-- Placed at the end of the document so the pages load faster -->
 	{$this->Html->script('jquery-2.1.4.min')}
-	{$this->Html->css('bootstrap')}
-	{$this->Html->script('bootstrap')}
-	{$this->fetch('script')}
+	{$this->Html->css('bootstrap.min')}
+	{$this->Html->css('bootstrap-responsive.min')}
 	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 	<!--[if lt IE 9]>
 	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -44,5 +43,8 @@
 
 	<!-- Le javascript
     ================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	{$this->Html->script('bootstrap.min')}
+	{$this->fetch('script')}
 </body>
 </html>
