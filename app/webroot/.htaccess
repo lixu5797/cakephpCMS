@@ -3,6 +3,6 @@
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
-    RewriteBase /sitetest
+    RewriteBase /devcms
 </IfModule>
 SetEnv APL_ENV Development
