@@ -9,7 +9,7 @@ CREATE TABLE users (
 );
 
 CREATE TABLE users (
-    `id` INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    `id` INT UNSIGNED AUTO_INCREMENT,
     `username` VARCHAR(50) not null,
     `mail_address` VARCHAR(64) not null,
     `password` VARCHAR(255) not null,
