@@ -93,4 +93,12 @@ class UsersController extends AppController {
 	public function logout() {
 		$this->redirect($this->Auth->logout());
 	}
+	
+	// admin
+	public function admin_login() {
+		$this->login(); //すでに作成したUser用のlogin()を使いまわす。
+	}
+	public function admin_logout(){
+		$this->logout(); //すでに作成したUser用のlogout()を使いまわす。
+	}
 }

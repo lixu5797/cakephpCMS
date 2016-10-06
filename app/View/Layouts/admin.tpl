@@ -34,7 +34,7 @@
 
 <body>
 	<div class="navbar navbar-fixed-top">
-		{$this->element('Layouts/navbar')}
+		{$this->element('Layouts/navbar_login')}
 	</div>
 	<div class="container">
 		<h1>Bootstrap starter template</h1>
