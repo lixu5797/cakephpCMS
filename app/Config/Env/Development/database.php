@@ -70,28 +70,24 @@ class DATABASE_CONFIG {
 
 
 	public $default = array(
-		'datasource' => 'Database/Postgres',
-		'persistent' => 'false', 
+		'datasource' => 'Database/Mysql',
+		'persistent' => false,
 		'host' => 'localhost',
-		'port' => '5432',
-		'login' => 'postgres',
-		'password' => 'pmdssw',
-		'database' => 'sitetest',
-		'schema' => 'public',
+		'login' => 'root',
+		'password' => '',
+		'database' => 'webapp',
 		'prefix' => '',
-		'encoding' => 'utf8'
+		//'encoding' => 'utf8',
 	);
 
 	public $test = array(
-		'datasource' => 'Database/Postgres',
-		'persistent' => 'false', 
+		'datasource' => 'Database/Mysql',
+		'persistent' => false,
 		'host' => 'localhost',
-		'port' => '5432',
-		'login' => 'postgres',
-		'password' => 'pmdssw',
-		'database' => 'test_sitetest',
-		'schema' => 'public',
+		'login' => 'root',
+		'password' => '',
+		'database' => 'test_webapp',
 		'prefix' => '',
-		'encoding' => 'utf8'
+		//'encoding' => 'utf8',
 	);
 }

@@ -34,7 +34,7 @@ class User extends AppModel {
 				'message' => '名前は2文字以上32文字以内にしてください。'
 			)
 		),
-		'mail_adress' => array(
+		'mail_address' => array(
 			array(
 				'rule' => array('isUnique'),
 				'message' => '既に使用されているメールアドレスです。'
@@ -52,6 +52,10 @@ class User extends AppModel {
 			array(
 				'rule' => array('between', 8, 32),
 				'message' => 'パスワードは8文字以上32文字以内にしてください。'
+			),
+			'match' => array(
+				'rule' => array('confirmPassword', 'confirm_password'),
+				'message' => '一致しません。'
 			)
 		),
 		'role' => array(
@@ -62,6 +66,12 @@ class User extends AppModel {
 			)
 		)
 	);
+	
+	public function confirmPassword($field, $confirm_password){
+		if ($field['password'] === $this->data[$this->name][$confirm_password]) {
+			return true;
+		}
+	}
 	
 	public function beforeSave($options = array()) {
 		if (isset($this->data[$this->alias]['password'])) {
