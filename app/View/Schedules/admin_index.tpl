@@ -1,7 +1,7 @@
 <div class="schedules index">
 	<h2>{__('Schedules')}</h2>
-	<table cellpadding="0" cellspacing="0">
-	<thead>
+	<table class="table table-bordered table-hover">
+	<thead class="thead-inverse">
 	<tr>
 			<th>{$this->Paginator->sort('id')}</th>
 			<th>{$this->Paginator->sort('title')}</th>
@@ -16,7 +16,7 @@
 	<tbody>
 	{foreach from=$schedules item=schedule}
 	<tr>
-		<td>{h($schedule['Schedule']['id'])}&nbsp;</td>
+		<td scope="row">{h($schedule['Schedule']['id'])}&nbsp;</td>
 		<td>{h($schedule['Schedule']['title'])}&nbsp;</td>
 		<td>{h($schedule['Schedule']['name'])}&nbsp;</td>
 		<td>{h($schedule['Schedule']['start_time'])}&nbsp;</td>
