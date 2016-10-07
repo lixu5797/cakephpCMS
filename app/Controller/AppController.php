@@ -49,6 +49,7 @@ class AppController extends Controller {
 	
 	public $components = array(
 		'Session',
+		'Acl',
 		'Auth' => array(
 			'loginRedirect' => array(
 				"admin"      => true,

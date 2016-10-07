@@ -13,6 +13,7 @@ CREATE TABLE users (
     `username` VARCHAR(50) not null,
     `mail_address` VARCHAR(64) not null,
     `password` VARCHAR(255) not null,
+	`group_id` INTEGER NOT NULL,
     `role` VARCHAR(20),
     `created` DATETIME DEFAULT NULL,
     `modified` DATETIME DEFAULT NULL,
@@ -25,3 +26,48 @@ CREATE TABLE IF NOT EXISTS `cake_sessions` (
   `expires` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+CREATE TABLE groups
+(
+id INTEGER NOT NULL AUTO_INCREMENT UNIQUE,
+name VARCHAR(255) NOT NULL,
+created DATETIME,
+modified DATETIME,
+PRIMARY KEY (id)
+) ENGINE=InnoDB;
+
+
+CREATE TABLE `acos` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `parent_id` int(10) DEFAULT NULL,
+  `model` varchar(255) DEFAULT NULL,
+  `foreign_key` int(10) DEFAULT NULL,
+  `alias` varchar(255) DEFAULT NULL,
+  `lft` int(10) DEFAULT NULL,
+  `rght` int(10) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+ 
+CREATE TABLE `aros` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `parent_id` int(10) DEFAULT NULL,
+  `model` varchar(255) DEFAULT NULL,
+  `foreign_key` int(10) DEFAULT NULL,
+  `alias` varchar(255) DEFAULT NULL,
+  `lft` int(10) DEFAULT NULL,
+  `rght` int(10) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+ 
+CREATE TABLE `aros_acos` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `aro_id` int(10) NOT NULL,
+  `aco_id` int(10) NOT NULL,
+  `_create` varchar(2) NOT NULL DEFAULT '0',
+  `_read` varchar(2) NOT NULL DEFAULT '0',
+  `_update` varchar(2) NOT NULL DEFAULT '0',
+  `_delete` varchar(2) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `ARO_ACO_KEY` (`aro_id`,`aco_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;

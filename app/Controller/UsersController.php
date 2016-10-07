@@ -83,7 +83,20 @@ class UsersController extends AppController {
 	public function login() {
 		if ($this->request->is('post')) {
 			if ($this->Auth->login()) {
-				$this->redirect($this->Auth->redirect());
+				/**
+				  * Acoが存在しない場合は、初期状態と判断しACLの設定画面に遷移させる
+				  */
+				$Aco = ClassRegistry::init('Aco');
+				$result = $Aco->find('count');
+				if (empty($result)) {
+					return $this->redirect(array(
+						'plugin' => 'acl',
+						'controller' => 'acos',
+						'action' => 'synchronize',
+					));
+				} else {
+					return $this->redirect($this->Auth->redirect());
+				}
 			} else {
 				$this->Session->setFlash(__('Invalid username or password, try again'));
 			}

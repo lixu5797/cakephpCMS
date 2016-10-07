@@ -1,5 +1,6 @@
 <?php
-
+CakePlugin::load('FullCalendar');
+CakePlugin::load('Acl', array('bootstrap' => true));
 // 環境識別
 require_once(APP . DS . 'Lib' . DS . 'Env.php');
 // 環境判断
